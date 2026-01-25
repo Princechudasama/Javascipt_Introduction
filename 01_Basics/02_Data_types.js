@@ -41,7 +41,7 @@ let sym1 = Symbol('123');
 
 //Reference -- call refenrce only allocate space and address first
 //Array, Objects,Functions
-let a = ["Prince","jayraj","het"];
+let array1 = ["Prince","jayraj","het"];
 
 let obj1 = {
     name : ["Prince","Jayraj","het"],
@@ -49,7 +49,7 @@ let obj1 = {
 }
 console.table(obj1);
 
-let b = function a () {
+let hello1 = function hello () {
     console.log("hello world");
     
 }
@@ -59,15 +59,30 @@ console.log(typeof(NaN)); // null - object
                           // object - object but function
                           // undefined - undefined
                           // nan - number
-                          // function - function    but object function
+                          // function - function but object function
 
+//primitive => stack (call by value) variable are always take stack memory 
 
+let a = 123;           // stack is created
+let b = a;             //                   
+a = 245;               //    2.b=a
+                       //    1.a=123  3.a=245                    
+console.log(a);
+console.log(b);
 
+//non primitive => heap (call by reference)
+let obj =  {
+    Name : "Prince",         // stack              //heap
+    marks : 100              //                    //
+}                            // 2.obj2-------------//------below    
+let obj2 = obj;              // 1.obj---------------------{
+                            //                     //       name : "Prince",
+                            //                     //       marks : 100
+                            //                            }
+obj.Name = "Sunil";
+obj.marks = 99;
 
-
-
-
-
-
+console.log(obj);
+console.log(obj2);
 
 
