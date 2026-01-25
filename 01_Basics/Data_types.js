@@ -24,5 +24,7 @@ let number;
 console.log(typeof "");
 console.log(typeof null); //it shows an object class
 console.log(typeof undefined);//it shows an undefined class
+console.log(typeof(NaN)); //it shows an number class
+
 
 
