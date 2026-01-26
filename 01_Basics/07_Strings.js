@@ -33,7 +33,26 @@
   
   console.log(first_name.slice(-6,3));//it divides in substring here you can use neg value
 
-  console.log(first_name.);
+  const email = "   princechudasama@googl.com     ";
+  console.log(email);
+  console.log(email.trim()); // it trims a leading and trailing space
+  console.log(email.trimStart()); // it trims a leading  space
+  console.log(email.trimEnd()); // it trims a  trailing space
+
+  const url = "https://princechudasama.com/java%20introduction";
+  console.log(url.replace('%20','-')); //it replces value as you as want where you want
+
+  console.log(url.includes('https://')); //it returns true if it contains the value
+
+  const yourname = "Princekumar Aravindbhai Chudasama";
+  console.log(yourname.split(' ')); //it return the array of any separated basis here white space is separator
+
+  const newName = yourname.concat(" Hello"); // it concat any string to the present string
+  console.log(newName) ;
+  
+  
+
+
   
   
   
