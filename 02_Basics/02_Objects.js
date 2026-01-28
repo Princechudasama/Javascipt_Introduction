@@ -1,11 +1,10 @@
 //Singleton using construction method
 const Juser2 = new Object(); //it is a singlton object
-console.log(Juser1);
 console.log(Juser2);
 
-
 //object literals
-const Juser1 = {}; // it is a non singlton object
+const Juser1 = {};
+console.log(Juser1); // it is a non singlton object
 // in array keys are already defined 0,1,...
 //but in objects keys are depends upon we
 const sym1 = Symbol("Sym");//symbol is a key below
