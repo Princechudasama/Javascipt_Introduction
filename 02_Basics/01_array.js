@@ -77,7 +77,7 @@ console.log(Array.from({name:"Prince"},));//it doesnt contain any value because 
 score1=100;
 score2=200;
 
-console.log(Array.of(score1,score2));//instead od from use of for bind multiple items into one array
+console.log(Array.of(score1,score2));//instead of from use of for bind multiple items into one array
 
 
 
