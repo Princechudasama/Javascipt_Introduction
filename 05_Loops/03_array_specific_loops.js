@@ -11,7 +11,7 @@
 //     console.log(a);
 // }
 
-//Maps => is use for storing data its provide order,unique not contains duplicates,key types as you want and iteration is easy over objects
+//Maps => is use for storing data its provide order,unique not contains duplicates,key types as you want and iteration is easy over objects but it is not iterables
 
 const map = new Map();
 map.set("name","Prince");
@@ -40,5 +40,5 @@ for (const i of ob1) {
     console.console.log(i);//it shows an ob1 is not iterable
 }
 
-
+//for..of gives whole key:value pair gives 
 
