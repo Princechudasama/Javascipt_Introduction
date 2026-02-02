@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+    justify-content: center;
+    display: flex;
+
+}
+
+span{
+    display: block;
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    border: 2px solid white;
+    color: azure;
+    font-size: medium;
+}
