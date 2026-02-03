@@ -10,23 +10,19 @@
 
     <h1>JavaScript Event Practice</h1>
 
-    <!-- Button event -->
     <button id="btnClick">Click Me</button>
     <p id="clickOutput"></p>
 
-    <!-- Mouse events -->
     <div id="box" style="width:200px; height:100px; background-color:lightblue; margin-top:20px;">
         Hover over this box
     </div>
     <p id="mouseOutput"></p>
 
-    <!-- Keyboard event -->
     <input type="text" id="textInput" placeholder="Type here">
     <p id="keyOutput"></p>
 
-    <!-- Form event -->
     <form id="myForm">
-        <p><label for="name">Your name </label><input id="name" type="text" placeholder="Your name"></p>
+        <p><label for="name" class="name">Your name </label><input id="name" type="text" placeholder="Your name"></p>
         <button id="main-sub" type="submit">Submit</button> <!-- you can give here onclick(alert) in tag also -->
 
     </form>
@@ -39,11 +35,66 @@
     //     alert('your responce is saved');
     // }// this is not recomdable so avoid it 
 
-    document.getElementById('main-sub').addEventListener('click', function (e) {
-        e.preventDefault();
-        //alert("Sumit button clicked");//it is also use for 
-        console.log(e);
+    //addEventListener
+    // document.getElementById('main-sub').addEventListener('click', function (e) {
+    //     e.preventDefault();//it pevent the default work when event occured
+    //     alert("Sumit button clicked");//it is also use for give alert when click button 
+    //     console.log(e);
+    //     console.log(e.type);//it gives the name of event
+    //     console.log(e.timeStamp);//it gives the time between load a page and event occur
+    //     console.log(e.target);//it gives and element that to be targeted
+    //     console.log(e.currentTarget);//it gives and element that to be targeted
+
+    //     console.log(e.clientX);//gives mouse x codinate inside the browser window
+    //     console.log(e.clientY);//gives mouse y codinate inside the browser window
+
+    //     console.log(e.screenX);//gives mouse x cordinate related to the screen
+    //     console.log(e.screenY)//gives mouse y cordinate related to the screen
+
+    //     if(e.altKey){//when you click button when pressed alt key then it shows true
+    //         console.log("altkey is pressed");
+    //     }
+    //      if(e.ctrlKey){//when you click button when pressed ctrl key then it shows true
+    //         console.log("ctrlkey is pressed");
+    //     }
+    //      if(e.shiftKey){//when you click button when pressed shift key then it shows true
+    //         console.log("shiftkey is pressed");
+    //     }
+          
+    // },false);//here true or false is event propogation
+            //it has two type 1.false => event bubling :inner element capture first and then goes up
+            //                        =>event captuing :upper element capture firts and then goes down
+
+    // document.getElementById('myForm').addEventListener('click',function (e){
+    //     e.preventDefault();
+    //     console.log("forms is clicked");
+    // })//by default it is false event bubling
+
+    // document.getElementById('main-sub').addEventListener('click',function (e){
+    //     e.preventDefault();
+    //     e.stopPropagation();//it stops propogation to the upper or lower propogation
+    //     console.log("button is clicked");
+    // })//when true is means that is event capuring
+
+    //remove elements when we click
+    document.querySelector('.name').addEventListener('click',(e) => {
+        // console.log(e.target.parentNode);
+        // let removeIt= e.target.parentNode;//here u use target.parentNode so it remove whole parent tag that is clicked
+        // removeIt.remove(); // here it is removed when u clicked it
+
+        console.log(e.target.tagName);//it gives tagname of only not whole tag
+
+        if(e.target.tagName == 'LABEL'){
+            let removeIt = e.target.parentNode
+            removeIt.remove(); 
+        }
+
     })
+
+
+
+
+
 </script>
 
 </html>
