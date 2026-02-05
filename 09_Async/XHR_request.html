@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hi</h1>
+</body>
+<script>
+    const requestUrl = "https://api.github.com/users/Princechudasama";//it is a url
+    const xhr = new XMLHttpRequest();//it creates a object
+    xhr.open('GET',requestUrl);//send request
+    xhr.onreadystatechange = function(){//it perfoms when all states are changes
+        console.log(xhr.readyState);//it prints states;
+        if(xhr.readyState === 4){//it is 4th state is readystate
+            const data = JSON.parse(this.responseText);//here responseText is called data and it points to the current context
+            console.log(data);//it is converted in Json
+            console.log(data.followers);//it gives an attributes value through object
+        }
+    }
+    xhr.send();//it is last done value that is used for send whole things
+</Script>
+</html>
