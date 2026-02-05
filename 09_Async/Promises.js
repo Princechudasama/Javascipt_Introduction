@@ -111,6 +111,12 @@ fetch('https://api.github.com/users/Princechudasama').then(function(response){
     console.log(data); 
 }).catch((e)=>console.log(e));
 
+/*
+fetch api is high priority over set timeout and setinterval like webapis
+=> when we fire query from fetch it two major work start first of fall in global context it allocate some memory for variable data and for fullfillment and another where for rejection 
+=> another work is in web api or node start for network request it is fullfill or not
+=>whenever network fullfill its store into variable and then in global execution environment
+*/
 
 
 
